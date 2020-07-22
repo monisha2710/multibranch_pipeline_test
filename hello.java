@@ -1,5 +1,5 @@
 class hello{
-	public String printMsg(String msg){
+	public static String printMsg(String msg){
 		return msg;
 	}
 	public static void main(String args[]){
