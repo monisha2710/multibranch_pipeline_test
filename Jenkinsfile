@@ -12,7 +12,7 @@ pipeline{
 		
 		stage("Run"){
 			steps{
-				bat 'java hello'
+				bat 'echo hello'
 			}
 		}
 	}
