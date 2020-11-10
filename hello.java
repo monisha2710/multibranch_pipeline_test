@@ -3,6 +3,6 @@ class hello{
 		return msg;
 	}
 	public static void main(String args[]){
-		System.out.println(printMsg("Hello!"));
+		System.out.println(printMsg("Hello!"))
 	}
 }
