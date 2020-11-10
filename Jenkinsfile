@@ -19,7 +19,7 @@ pipeline{
 	
 	post{
 		always{
-			recordIssues aggregatingResults: true, enabledForFailure: true, tools: [java(reportEncoding: 'UTF-8')]
+			recordIssues aggregatingResults: true, enabledForFailure: true, tools: [checkStyle(reportEncoding: 'UTF-8'), codeAnalysis(reportEncoding: 'UTF-8'), java(reportEncoding: 'UTF-8')]
 		}
 	}
 }
