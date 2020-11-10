@@ -15,5 +15,11 @@ pipeline{
 				bat 'java hello'
 			}
 		}
+		
+		stage("Publish checks"){
+			steps{
+				publishChecks detailsURL: 'https://github.com/monisha2710/multibranch_pipeline_test', name: 'Jenkins', summary: 'Jenkins checks testing', text: 'Check  1 completed', title: 'Check1'
+			}
+		}
 	}
 }
