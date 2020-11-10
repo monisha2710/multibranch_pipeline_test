@@ -15,11 +15,12 @@ pipeline{
 				bat 'java hello'
 			}
 		}
-		
-		stage("Publish checks"){
-			steps{
-				recordIssues aggregatingResults: true, enabledForFailure: true, tools: [java(reportEncoding: 'UTF-8')]
-			}
+	}
+	
+	post{
+		always{
+			recordIssues aggregatingResults: true, enabledForFailure: true, tools: [java(reportEncoding: 'UTF-8')]
 		}
 	}
 }
+
